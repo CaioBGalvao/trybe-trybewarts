@@ -4,6 +4,106 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e
 
 ---
 
+# Requisitos do projeto
+
+**Dica:** Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
+
+## Lista de requisitos obrigatórios:
+
+### 1. Crie uma barra verde na parte superior da página
+
+#### Observações técnicas:
+
+* Esta barra deve possuir a classe `header`
+* A classe `header` deve determinar que o elemento é um **flex container**
+* A classe `header` deve possuir a propriedade `background-color: rgb(50, 167, 145)`
+
+#### O que será verificado:
+
+* Existe um elemento com a classe `header`
+* O elemento possui a propriedade CSS `display: flex`
+* O elemento possui a propriedade CSS `background-color: rgb(50, 167, 145)`
+
+### 2. Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior
+
+#### Observações técnicas:
+
+* Deve existir um elemento img com a classe `trybewarts-header-logo`
+* O atributo `src` do logotipo deve apontar para `images/trybewarts-header-logo.svg`
+
+#### O que será verificado:
+
+* Existe um elemento `img` com a classe `trybewarts-header-logo`
+* O elemento possui o atributo `src` apontando para `images/trybewarts-header-logo.svg`
+
+### 3. Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login
+
+#### Observações técnicas:
+
+* O formulário deve ter a classe `trybewarts-login`
+* O input de **email** deverá ter o atributo `name` igual a **email** e o `placeholder` igual a **Email**
+* O input de **senha** deverá ter o atributo `name` igual a **password** e o `placeholder` igual a **Senha**
+* O botão deverá ter o texto **"Entrar"**
+* O formulário deve ser um **flex container**
+* O formulário deve estar a direita da logo
+  * **Dica:** adicione a propriedade flex que faz os elementos terem o espaçamento máximo **entre eles** no **header**
+* Ao preencher o formulário e clicar no botão, será validado que:
+  * Caso o email seja **"tryber@teste.com"** e a senha seja **"123456"** será emitido um alerta contendo o texto **"Olá, Tryber!"** 
+  * Em todos os outro casos deverá ser emitido um alerta contendo o texto **"Email ou senha inválidos."**
+
+#### O que será verificado:
+
+* Existe um elemento `form` com a classe `trybewarts-login`
+* Existe um input com o atributo `name` igual a **email** e o `placeholder` igual a **Email**
+* Existe um input com o atributo `name` igual a **password** e o `placeholder` igual a **Senha**
+* Existe um botão com o texto **"Entrar"**
+* O formulário possui a propriedade CSS `display: flex`
+* O elemento `form` está à direita da logo
+* Ao clicar no botão de login dispara um alert com o texto **"Email ou senha inválidos"**, no caso de erro de preenchimento dos dados
+* Ao clicar no botão de login dispara um alert com o texto **"Olá, Tryber!"**, no caso de preenchimento correto dos dados.
+
+### 4. Crie um título com o texto `Trybewarts` centralizado dentro do `Header`
+
+#### Observações técnicas:
+
+* Deve existir um elemento `<h1>` com o **id** `trybewarts-header-title` e com o texto **"Trybewarts"**
+* O título deverá estar centralizado na barra verde
+  * O header deve ter exatamente três elementos filhos
+  * O filho do meio deve ser o título
+
+#### O que será verificado:
+
+* Existe um elemento `h1` com o id `trybewarts-header-title` e com o texto `Trybewarts`
+* O elemento com a classe `header` deve possuir exatos `3` elementos filhos
+* O filho do meio do elemento com a classe `header` deve ser o título h1 `Trybewarts`
+
+### 5. Adicione um formulário no corpo da página
+
+#### Observações técnicas:
+
+* Deve existir um formulário com o id `evaluation-form`
+* O formulário deve estar inserido dentro de uma tag `main`
+* Tanto o formulário quanto o `main` devem ser flex containers
+* O formulário deve ter uma largura de 675px
+
+#### O que será verificado:
+
+* Existe um elemento `form` com o id `evaluation-form`
+* O elemento `form` está dentro da tag `main`
+* O elemento `main` e o `form` possuem a propriedade CSS `display: flex`
+* O elemento `form` possui a propriedade CSS `width: 675px`
+
+### 6. Faça com que o eixo principal do formulário seja vertical
+
+#### Observações técnicas:
+
+* Mude o eixo principal do formulário com id `evaluation-form` para vertical
+
+#### O que será verificado:
+
+* O elemento `evaluation-form` possui a propriedade CSS `flex-direction: column`
+
+### 7. Adicione a logo da Trybewarts no lado direito da página
 # Boas vindas ao repositório do projeto Trybewarts Wizarding School! :mage:
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
@@ -14,50 +114,91 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 # Sumário
 
-* [Habilidades](#habilidades)
-* [Entregáveis](#entregáveis)
+- [Requisitos do projeto](#requisitos-do-projeto)
+  - [Lista de requisitos obrigatórios:](#lista-de-requisitos-obrigatórios)
+    - [1. Crie uma barra verde na parte superior da página](#1-crie-uma-barra-verde-na-parte-superior-da-página)
+      - [Observações técnicas:](#observações-técnicas)
+      - [O que será verificado:](#o-que-será-verificado)
+    - [2. Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior](#2-adicione-o-logotipo-da-trybewarts-com-a-classe-trybewarts-header-logo-na-barra-superior)
+      - [Observações técnicas:](#observações-técnicas-1)
+      - [O que será verificado:](#o-que-será-verificado-1)
+    - [3. Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login](#3-acrescente-um-formulário-de-login-no-canto-direito-da-barra-superior-contendo-os-inputs-de-email-senha-e-um-botão-de-login)
+      - [Observações técnicas:](#observações-técnicas-2)
+      - [O que será verificado:](#o-que-será-verificado-2)
+    - [4. Crie um título com o texto `Trybewarts` centralizado dentro do `Header`](#4-crie-um-título-com-o-texto-trybewarts-centralizado-dentro-do-header)
+      - [Observações técnicas:](#observações-técnicas-3)
+      - [O que será verificado:](#o-que-será-verificado-3)
+    - [5. Adicione um formulário no corpo da página](#5-adicione-um-formulário-no-corpo-da-página)
+      - [Observações técnicas:](#observações-técnicas-4)
+      - [O que será verificado:](#o-que-será-verificado-4)
+    - [6. Faça com que o eixo principal do formulário seja vertical](#6-faça-com-que-o-eixo-principal-do-formulário-seja-vertical)
+      - [Observações técnicas:](#observações-técnicas-5)
+      - [O que será verificado:](#o-que-será-verificado-5)
+    - [7. Adicione a logo da Trybewarts no lado direito da página](#7-adicione-a-logo-da-trybewarts-no-lado-direito-da-página)
+- [Boas vindas ao repositório do projeto Trybewarts Wizarding School! :mage:](#boas-vindas-ao-repositório-do-projeto-trybewarts-wizarding-school-mage)
+- [Sumário](#sumário)
+- [Habilidades](#habilidades)
+- [Entregáveis](#entregáveis)
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Desenvolvimento](#desenvolvimento)
   - [Data de entrega](#data-de-entrega)
-* [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
+- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
     - [Antes de começar a desenvolver:](#antes-de-começar-a-desenvolver)
     - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-* [Como desenvolver](#como-desenvolver)
-  - [Observações técnicas](#observações-técnicas)
+- [Como desenvolver](#como-desenvolver)
+  - [Observações técnicas](#observações-técnicas-6)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
-* [Requisitos do projeto](#requisitos-do-projeto)
-  - [Lista de requisitos obrigatórios:](#lista-de-requisitos-obrigatórios)
-    - [1. Crie uma barra verde na parte superior da página](#1-crie-uma-barra-verde-na-parte-superior-da-página)
-    - [2. Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior](#2-adicione-o-logotipo-da-trybewarts-com-a-classe-trybewarts-header-logo-na-barra-superior)
-    - [3. Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login](#3-acrescente-um-formulário-de-login-no-canto-direito-da-barra-superior-contendo-os-inputs-de-email-senha-e-um-botão-de-login)
-    - [4. Crie um título com o texto `Trybewarts` centralizado dentro do `Header`](#4-crie-um-título-com-o-texto-trybewarts-centralizado-dentro-do-header)
-    - [5. Adicione um formulário no corpo da página](#5-adicione-um-formulário-no-corpo-da-página)
-    - [6. Faça com que o eixo principal do formulário seja vertical](#6-faça-com-que-o-eixo-principal-do-formulário-seja-vertical)
-    - [7. Adicione a logo da Trybewarts no lado direito da página](#7-adicione-a-logo-da-trybewarts-no-lado-direito-da-página)
+      - [Observações técnicas:](#observações-técnicas-7)
+      - [O que será verificado:](#o-que-será-verificado-6)
     - [8. Acrescente ao formulário com id `evaluation-form` os inputs de `nome, sobrenome e email`](#8-acrescente-ao-formulário-com-id-evaluation-form-os-inputs-de-nome-sobrenome-e-email)
+      - [Observações técnicas:](#observações-técnicas-8)
+      - [O que será verificado:](#o-que-será-verificado-7)
     - [9. Acrescente ao formulário um select com o id `house` contendo as opções `Gitnória`, `Reactpuff`, `Corvinode` e `Pytherina`](#9-acrescente-ao-formulário-um-select-com-o-id-house-contendo-as-opções-gitnória-reactpuff-corvinode-e-pytherina)
+      - [Observações técnicas:](#observações-técnicas-9)
+      - [O que será verificado:](#o-que-será-verificado-8)
     - [10. Posicione os campos de `Nome` e `Sobrenome` para que fiquem em linha](#10-posicione-os-campos-de-nome-e-sobrenome-para-que-fiquem-em-linha)
+      - [Observações técnicas:](#observações-técnicas-10)
+      - [O que será verificado:](#o-que-será-verificado-9)
     - [11. Posicione os campos de `Email` e `Casa` para que fiquem em linha](#11-posicione-os-campos-de-email-e-casa-para-que-fiquem-em-linha)
+      - [Observações técnicas:](#observações-técnicas-11)
+      - [O que será verificado:](#o-que-será-verificado-10)
     - [12. Acrescente ao formulário um campo de entrada para qual família a pessoa estudante se identifica](#12-acrescente-ao-formulário-um-campo-de-entrada-para-qual-família-a-pessoa-estudante-se-identifica)
+      - [Observações técnicas:](#observações-técnicas-12)
+      - [O que será verificado:](#o-que-será-verificado-11)
     - [13. Crie campos de entrada do tipo `checkbox` contendo seis opções](#13-crie-campos-de-entrada-do-tipo-checkbox-contendo-seis-opções)
+      - [Observações técnicas:](#observações-técnicas-13)
+      - [O que será verificado:](#o-que-será-verificado-12)
     - [14. Crie campo de entrada para avaliar de 1 a 10 o nível de satisfação com a Trybewarts](#14-crie-campo-de-entrada-para-avaliar-de-1-a-10-o-nível-de-satisfação-com-a-trybewarts)
+      - [Observações técnicas:](#observações-técnicas-14)
+      - [O que será verificado:](#o-que-será-verificado-13)
     - [15. Crie uma textarea com o id `textarea` e uma label com a classe `textarea` contendo o número máximo de caracteres igual à 500](#15-crie-uma-textarea-com-o-id-textarea-e-uma-label-com-a-classe-textarea-contendo-o-número-máximo-de-caracteres-igual-à-500)
+      - [Observações técnicas:](#observações-técnicas-15)
+      - [O que será verificado:](#o-que-será-verificado-14)
     - [16. Crie um campo de entrada do tipo `checkbox` com o id `agreement` para validar as informações](#16-crie-um-campo-de-entrada-do-tipo-checkbox-com-o-id-agreement-para-validar-as-informações)
+      - [Observações técnicas:](#observações-técnicas-16)
+      - [O que será verificado:](#o-que-será-verificado-15)
     - [17. Crie um botão de Enviar para submeter o formulário](#17-crie-um-botão-de-enviar-para-submeter-o-formulário)
+      - [Observações técnicas:](#observações-técnicas-17)
+      - [O que será verificado:](#o-que-será-verificado-16)
     - [18. Faça com que o botão `Enviar` seja habilitado somente após a checkbox do requisito 16 ser selecionada](#18-faça-com-que-o-botão-enviar-seja-habilitado-somente-após-a-checkbox-do-requisito-16-ser-selecionada)
+      - [Observações técnicas:](#observações-técnicas-18)
+      - [O que será verificado:](#o-que-será-verificado-17)
     - [19. Crie um rodapé no final da página](#19-crie-um-rodapé-no-final-da-página)
+      - [Observações técnicas:](#observações-técnicas-19)
+      - [O que será verificado:](#o-que-será-verificado-18)
   - [Lista de requisitos bônus:](#lista-de-requisitos-bônus)
     - [20. Crie um contador com o ID `counter` contendo o número de caracteres disponíveis no textarea, variando de 500 até 0, que deverá ser atualizado a medida que algo for digitado na textarea](#20-crie-um-contador-com-o-id-counter-contendo-o-número-de-caracteres-disponíveis-no-textarea-variando-de-500-até-0-que-deverá-ser-atualizado-a-medida-que-algo-for-digitado-na-textarea)
-    - [21. Faça com que ao clicar no botão `Enviar`, o conteúdo do formulário seja substituído pelas informações preenchidas](#21-faça-com-que-ao-clicar-no-botão-enviar-o-conteúdo-do-formulário-seja-substituído-pelas-informações-preenchidas)
+      - [Observações técnicas:](#observações-técnicas-20)
+      - [O que será verificado:](#o-que-será-verificado-19)
+    - [21. Faça com que, ao clicar no botão `Enviar`, o conteúdo dentro da tag `<form>` seja substituído pelas informações preenchidas pela pessoa usuária](#21-faça-com-que-ao-clicar-no-botão-enviar-o-conteúdo-dentro-da-tag-form-seja-substituído-pelas-informações-preenchidas-pela-pessoa-usuária)
+      - [Observações técnicas:](#observações-técnicas-21)
+      - [O que será verificado:](#o-que-será-verificado-20)
   - [Lista de requisitos não avaliativos:](#lista-de-requisitos-não-avaliativos)
     - [22. Preencha o arquivo feedback.md . Aproveite o espaço para deixar seus feedbacks sobre o projeto.](#22-preencha-o-arquivo-feedbackmd--aproveite-o-espaço-para-deixar-seus-feedbacks-sobre-o-projeto)
+      - [Observações técnicas:](#observações-técnicas-22)
     - [23. Realize o desenvolvimento da versão mobile do formulário Trybewarts.](#23-realize-o-desenvolvimento-da-versão-mobile-do-formulário-trybewarts)
-* [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
-  - [Code Review (opcional)](#code-review-opcional)
-  - [Dicas](#dicas)
-  - [Revisando um pull request](#revisando-um-pull-request)
-* [Avisos finais](#avisos-finais)
+      - [Observações técnicas:](#observações-técnicas-23)
 
 # Habilidades
 
@@ -264,109 +405,6 @@ Após executar um dos dois comandos acima, será aberta uma janela de navegador 
 Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) vídeo 😉🎙
 
 **Para rodar o cypress é preciso ter rodado o comando npm install anteriormente.**
-
----
-
-# Requisitos do projeto
-
-**Dica:** Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
-
-## Lista de requisitos obrigatórios:
-
-### 1. Crie uma barra verde na parte superior da página
-
-#### Observações técnicas:
-
-* Esta barra deve possuir a classe `header`
-* A classe `header` deve determinar que o elemento é um **flex container**
-* A classe `header` deve possuir a propriedade `background-color: rgb(50, 167, 145)`
-
-#### O que será verificado:
-
-* Existe um elemento com a classe `header`
-* O elemento possui a propriedade CSS `display: flex`
-* O elemento possui a propriedade CSS `background-color: rgb(50, 167, 145)`
-
-### 2. Adicione o logotipo da Trybewarts com a classe `trybewarts-header-logo` na barra superior
-
-#### Observações técnicas:
-
-* Deve existir um elemento img com a classe `trybewarts-header-logo`
-* O atributo `src` do logotipo deve apontar para `images/trybewarts-header-logo.svg`
-
-#### O que será verificado:
-
-* Existe um elemento `img` com a classe `trybewarts-header-logo`
-* O elemento possui o atributo `src` apontando para `images/trybewarts-header-logo.svg`
-
-### 3. Acrescente um formulário de login no canto direito da barra superior contendo os inputs de email, senha e um botão de login
-
-#### Observações técnicas:
-
-* O formulário deve ter a classe `trybewarts-login`
-* O input de **email** deverá ter o atributo `name` igual a **email** e o `placeholder` igual a **Email**
-* O input de **senha** deverá ter o atributo `name` igual a **password** e o `placeholder` igual a **Senha**
-* O botão deverá ter o texto **"Entrar"**
-* O formulário deve ser um **flex container**
-* O formulário deve estar a direita da logo
-  * **Dica:** adicione a propriedade flex que faz os elementos terem o espaçamento máximo **entre eles** no **header**
-* Ao preencher o formulário e clicar no botão, será validado que:
-  * Caso o email seja **"tryber@teste.com"** e a senha seja **"123456"** será emitido um alerta contendo o texto **"Olá, Tryber!"** 
-  * Em todos os outro casos deverá ser emitido um alerta contendo o texto **"Email ou senha inválidos."**
-
-#### O que será verificado:
-
-* Existe um elemento `form` com a classe `trybewarts-login`
-* Existe um input com o atributo `name` igual a **email** e o `placeholder` igual a **Email**
-* Existe um input com o atributo `name` igual a **password** e o `placeholder` igual a **Senha**
-* Existe um botão com o texto **"Entrar"**
-* O formulário possui a propriedade CSS `display: flex`
-* O elemento `form` está à direita da logo
-* Ao clicar no botão de login dispara um alert com o texto **"Email ou senha inválidos"**, no caso de erro de preenchimento dos dados
-* Ao clicar no botão de login dispara um alert com o texto **"Olá, Tryber!"**, no caso de preenchimento correto dos dados.
-
-### 4. Crie um título com o texto `Trybewarts` centralizado dentro do `Header`
-
-#### Observações técnicas:
-
-* Deve existir um elemento `<h1>` com o **id** `trybewarts-header-title` e com o texto **"Trybewarts"**
-* O título deverá estar centralizado na barra verde
-  * O header deve ter exatamente três elementos filhos
-  * O filho do meio deve ser o título
-
-#### O que será verificado:
-
-* Existe um elemento `h1` com o id `trybewarts-header-title` e com o texto `Trybewarts`
-* O elemento com a classe `header` deve possuir exatos `3` elementos filhos
-* O filho do meio do elemento com a classe `header` deve ser o título h1 `Trybewarts`
-
-### 5. Adicione um formulário no corpo da página
-
-#### Observações técnicas:
-
-* Deve existir um formulário com o id `evaluation-form`
-* O formulário deve estar inserido dentro de uma tag `main`
-* Tanto o formulário quanto o `main` devem ser flex containers
-* O formulário deve ter uma largura de 675px
-
-#### O que será verificado:
-
-* Existe um elemento `form` com o id `evaluation-form`
-* O elemento `form` está dentro da tag `main`
-* O elemento `main` e o `form` possuem a propriedade CSS `display: flex`
-* O elemento `form` possui a propriedade CSS `width: 675px`
-
-### 6. Faça com que o eixo principal do formulário seja vertical
-
-#### Observações técnicas:
-
-* Mude o eixo principal do formulário com id `evaluation-form` para vertical
-
-#### O que será verificado:
-
-* O elemento `evaluation-form` possui a propriedade CSS `flex-direction: column`
-
-### 7. Adicione a logo da Trybewarts no lado direito da página
 
 #### Observações técnicas:
 
@@ -618,66 +656,3 @@ Esses requisitos **não** são verificáveis pelo avaliador automático.
 * Deixe sua criatividade fluir! Preferimos não avaliar esse requisito justamente pra que você tenha liberdade para executar a responsividade da maneira que você achar mais agradável!
 
 ---
-
-# Depois de terminar o desenvolvimento
-
-#### A pessoa dona da branch deve garantir que o último commit nessa branch é seu. Pode ser feita alguma alteração que não afete o cumprimento dos requisitos para realizar o commit.
-
-A(s) outra(s) pessoa(s) integrante(s) da equipe deve(m) criar uma nova `branch` a partir da `branch` de trabalho _(a primeira branch criada pela equipe)_.
-
-Exemplo: 
-
-1. Use `git branch` para ter certeza de que está na branch de trabalho;
-2. Caso não esteja use `git checkout joaozinho-trybewarts-project`  para trocar de `branch`;
-3. User `git checkout -b mariazinha-trybewarts-project` para criar uma nova branch a partir da branch anterior (`joaozinnho-trybewarts-project`);
-
-**Garanta que o último commit da branch é de autoria da pessoa dona de cada branch. Novamente pode ser feita alguma alteração que não afete o cumprimento dos requisitos para realizar o commit.**
-
-1. Adicione sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin mariazinha-trybewarts-project`
-   
-2. Crie um novo `Pull Request` (PR)
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-020-a-project-trybewarts/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_, um título claro que o identifique, e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-020-a-project-trybewarts/pulls) e confira que o seu _Pull Request_ está criado
- 
-⚠️ **Para o seu projeto ser avaliado você deve se assegurar que o último commit na branch é da pessoa dona da branch.**
-
----
-
-## Code Review (opcional)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-* No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-* No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-* No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-020-a`.
-
-Caso tenha alguma dúvida, [aqui tem um vídeo explicativo](https://vimeo.com/362189205).
-
-## Dicas
-
-* Para colocar sua página no [GitHub Pages](https://pages.github.com/), não é necessário remover o conteúdo que já está lá, você pode apenas adicionar essa nova página. Para isso, todo o conteúdo desse projeto deve ser colocado em uma pasta `/projetos/trybewarts`.
-
----
-
-## Revisando um pull request
-
-À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
-
-Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
-
----
-
-# Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
