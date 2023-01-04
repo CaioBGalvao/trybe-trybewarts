@@ -1,4 +1,4 @@
-# Trybewarts
+# Trybe Projeto Trybewarts
 ## Quinto projeto da Trybe
 
 Nesse projeto uma página HTML era solicitada com o uso de CSS.
